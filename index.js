@@ -21,7 +21,7 @@ function getVerboseObject(object) {
 
 function viewCart() {
   if (cart.length < 1) {
-    console.console.log(`Your shopping cart is empty.`);
+    console.log(`Your shopping cart is empty.`);
     return
   }
   var verboseCart = `In your cart, you have ${getVerboseObject(cart[0])}`
