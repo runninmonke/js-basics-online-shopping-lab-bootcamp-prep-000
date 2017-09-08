@@ -20,10 +20,12 @@ function getVerboseObject(object) {
 }
 
 function viewCart() {
-  var verboseCart = `In your cart, you have ${getVerboseObject(cart[0])}`
   if (cart.length < 1) {
     console.console.log(`Your shopping cart is empty.`);
-  } else if (cart.length == 1) {
+    return
+  }
+  var verboseCart = `In your cart, you have ${getVerboseObject(cart[0])}`
+  if (cart.length == 1) {
     console.log(`${verboseCart}.`)
   } else if (cart.length == 2) {
     console.console.log(`${verboseCart} and ${getVerboseObject(cart[1])}.`);
