@@ -16,7 +16,7 @@ function addToCart(item) {
 }
 
 function getVerboseObject(object) {
-  return `${Object.keys(object)[0]} at ${object[Object.keys(object)[0]]}`
+  return `${Object.keys(object)[0]} at $${object[Object.keys(object)[0]]}`
 }
 
 function viewCart() {
