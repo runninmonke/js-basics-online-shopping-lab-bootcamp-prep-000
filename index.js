@@ -15,11 +15,20 @@ function addToCart(item) {
  return cart
 }
 
+function getValue(object) {
+  return object[Object.keys(object)[0]]
+}
+
 function viewCart() {
+  var verboseCart = `In your cart, you have ${Object.keys(cart[0])[0]} at ${getValue(cart[0])}`
   if (cart.length < 1) {
     console.console.log(`Your shopping cart is empty.`);
   } else if (cart.length == 2) {
-    console.console.log(`In your cart, you have ${Object.keys(cart[0])[0]} at ${cart[0]} and ${Object.keys(cart[1])[0]} at ${cart[1]}.`);
+    console.console.log(`${verboseCart} and ${Object.keys(cart[1])[0]} at ${getValue(cart[1])}.`);
+  } else {
+    for (i = 1; i < cart.length; i++) {
+      verboseCart += ` and ${Object.keys(cart[i])[0]} at ${getValue(cart[i])}`
+    }
   }
 }
 
