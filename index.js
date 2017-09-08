@@ -15,19 +15,19 @@ function addToCart(item) {
  return cart
 }
 
-function getValue(object) {
-  return object[Object.keys(object)[0]]
+function getVerboseObject(object) {
+  return `${Object.keys(object)[0]} at ${object[Object.keys(object)[0]]}`
 }
 
 function viewCart() {
-  var verboseCart = `In your cart, you have ${Object.keys(cart[0])[0]} at ${getValue(cart[0])}`
+  var verboseCart = `In your cart, you have ${getVerboseObject(cart[0])}`
   if (cart.length < 1) {
     console.console.log(`Your shopping cart is empty.`);
   } else if (cart.length == 2) {
-    console.console.log(`${verboseCart} and ${Object.keys(cart[1])[0]} at ${getValue(cart[1])}.`);
+    console.console.log(`${verboseCart} and ${getVerboseObject(cart[1])}.`);
   } else {
-    for (i = 1; i < cart.length; i++) {
-      verboseCart += ` and ${Object.keys(cart[i])[0]} at ${getValue(cart[i])}`
+    for (i = 1; i < cart.length - 1; i++) {
+      verboseCart += `, ${Object.keys(cart[i])[0]} at ${getValue(cart[i])}`
     }
   }
 }
