@@ -37,7 +37,8 @@ function viewCart() {
   }
 }
 
-viewCart([{'pie': 3}, {'jam': 99}, {'wood': 55}])
+cart = [{'pie': 3}, {'jam': 99}, {'wood': 55}]
+viewCart()
 
 function total() {
   // write your code here
