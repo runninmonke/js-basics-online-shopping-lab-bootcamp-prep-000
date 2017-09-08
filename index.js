@@ -16,7 +16,11 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  // write your code here
+  if (cart.length < 1) {
+    console.console.log(`Your shopping cart is empty.`);
+  } else if (cart.length == 2) {
+    console.console.log(`In your cart, you have ${Object.keys(cart[0])[0]} at ${cart[0]} and ${Object.keys(cart[1])[0]} at ${cart[1]}.`);
+  }
 }
 
 function total() {
@@ -28,5 +32,7 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-  // write your code here
+  if (cardNumber) {
+        
+  }
 }
