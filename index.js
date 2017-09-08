@@ -28,7 +28,7 @@ function viewCart() {
   } else if (cart.length == 2) {
     console.console.log(`${verboseCart} and ${getVerboseObject(cart[1])}.`);
   } else {
-    for (i = 1; i < cart.length - 1; i++) {
+    for (var i = 1; i < cart.length - 1; i++) {
       verboseCart += `, ${getVerboseObject(cart[i])}`
     }
     console.log(`${verboseCart}, and ${getVerboseObject(cart.slice(cart.length - 1))}`)
