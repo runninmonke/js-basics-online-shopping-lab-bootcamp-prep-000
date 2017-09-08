@@ -53,11 +53,11 @@ function removeFromCart(item) {
       wasInCart = true
       i--
     }
-    if (!wasInCart) {
-      console.log('That item is not in your cart.')
-    }
-    return cart
   }
+  if (!wasInCart) {
+    console.log('That item is not in your cart.')
+  }
+  return cart
 }
 
 removeFromCart('tea');
